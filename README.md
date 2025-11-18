@@ -99,43 +99,54 @@ Monthly income has minimal correlation with attrition, indicating pay is not the
 
 ---
 
-## Feature Engineering Highlights
-Key engineered fields:
-- EngagementScore  
-- WorkStrainScore  
-- ManagerLow indicator  
-- Tenure Buckets  
-- CompensationRatio  
-- AttritionFlag  
+## 🛠️ Feature Engineering Highlights
+
+- **EngagementScore** → Combined metric using JobSatisfaction, WorkLifeBalance, ManagerRating  
+- **WorkStrainScore** → Stress index combining OverTimeHours + DistanceFromHome + WorkLifeBalance  
+- **ManagerLow** → Binary flag for manager rating ≤ 3  
+- **TenureBucket** → Categorized YearsAtCompany into (0–1, 2–4, 5–9, 10+)  
+- **CompensationRatio** → Salary relative to median salary of same job role  
+- **AttritionFlag** → Converted Attrition (Yes/No) into 1/0 numeric label  
+- **OvertimeCategory** → Binned OverTimeHours into Low/Medium/High groups  
+- **IsEarlyJoiner** → Flag for employees with ≤ 2 years of tenure  
+
 
 These features enhanced diagnostic clarity and predictive performance.
 
 ---
 
-## Predictive Modeling
+## Predictive Modeling (Logistic Regression)
 
-### Models Developed
-- Logistic Regression  
-- Random Forest  
-- XGBoost (best-performing model)
+### Model Developed
+Only **Logistic Regression** was used as the predictive model because it is:
 
-### Model Capabilities
-- Predicts attrition probability  
-- Ranks high-risk employees  
-- Highlights key drivers behind risk scores  
+- Interpretable  
+- Business-friendly  
+- Fast to train  
+- Ideal for binary outcomes like **Attrition vs Non-Attrition**  
 
-### Evaluation Metrics
-- Precision, Recall, Accuracy  
-- ROC-AUC  
-- Confusion Matrix  
-- SHAP-based feature importance  
+### Objective
+To predict the **probability of employee attrition** and identify the **key factors** influencing churn so HR teams can take **data-driven preventive actions**.
 
-### Top Predictors
-1. WorkStrainScore  
-2. OverTimeHours  
-3. ManagerRating  
-4. EngagementScore  
-5. YearsSinceLastPromotion  
+---
+
+## Logistic Regression: What It Achieved
+
+### ✔ Predictive Capabilities
+The model was designed to:
+
+- **Predict attrition likelihood** for each employee  
+- **Prioritize high-risk employees** for HR intervention  
+- **Quantify how risk factors influence attrition**  
+- **Support leadership decisions** with measurable insights  
+
+---
+
+## Model Performance
+
+### **AUC Score**
+```text
+Logistic Regression AUC = 0.8063  
 
 ---
 
