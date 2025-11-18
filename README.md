@@ -130,9 +130,9 @@ To predict the **probability of employee attrition** and identify the **key fact
 
 ---
 
-## Logistic Regression: What It Achieved
+### Logistic Regression: What It Achieved
 
-### ✔ Predictive Capabilities
+### Predictive Capabilities
 The model was designed to:
 
 - **Predict attrition likelihood** for each employee  
@@ -144,13 +144,12 @@ The model was designed to:
 
 ## Model Performance
 
-### **AUC Score**
-```text
+## **AUC Score**
 Logistic Regression AUC = 0.8063  
 
----
 
-## Actionable Recommendations
+
+### Actionable Recommendations
 
 | Issue Identified | Recommended Action |
 |------------------|--------------------|
@@ -168,7 +167,7 @@ Logistic Regression AUC = 0.8063
 
 ---
 
-## Deliverables
+### Deliverables
 - Cleaned and processed dataset  
 - Complete Jupyter Notebook workflow  
 - Engineered dataset  
@@ -178,6 +177,4 @@ Logistic Regression AUC = 0.8063
 
 ---
 
-## Project Description (Short)
-An end-to-end HR Analytics project designed to diagnose a 40% attrition rate, identify major churn drivers, build predictive models, and present workforce risk insights through an interactive dashboard. The solution transforms HR data into actionable insights for retention and workforce planning.
 
